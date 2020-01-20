@@ -1,0 +1,26 @@
+step for executing following expression manually:
+	1. a = 4, b = 2, x = 5, y = 4
+	   result = 5*b*b*x-3*a*y*y-8*b*b*x+10*a*y
+
+		steps: 1. (5*b*b*x) - (3*a*y*y) - (8*b*b*x) + (10*a*y)
+		       2. (5*2*2*5) - (3*4*4*4) - (8*2*2*5) + (10*4*4)
+		       3. (100) - (192) - (160) + (160)
+		       4. -92-160+160
+                       5. -252+160
+                       6. -92
+
+	2. a = 4, y = 3, c =7 
+	   calc = 4*a*y/c-a*y/c
+	   steps: 1. calc = (4*a*y/c) - (a*y/c)
+           	  2. calc = (4*4*3/7) - (4*3/7)
+	          3. calc = (48/7) - (12/7)
+	         4. calc = 6.86 - 1.71
+	         5. calc = 5.15
+	
+	3. a=4.4, b=0.0, c=4.2, y=3.0
+	   ans = c+a*y*y/b
+         steps: 1. ans = c+(a*y*y*y/b)
+                2. ans = 4.2 + (4.4*3.0*3.0/0.0)
+	        3. ans = 4.2+(13.2*3.0/0.0)
+	        4. ans = 4.2 + (40.6/0.0)
+	        5. ans = ZeroDivisionError: float division by zero	

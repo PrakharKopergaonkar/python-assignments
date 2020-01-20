@@ -1,0 +1,13 @@
+steps for executing following expression manually:
+	4*3/4+4/4+8-2+15/2
+1. priority of * and / is same and highest. They will be executed first from left to right
+	a. ((4*3)/4)+(4/4)+8-2 + (15/2)
+	b. (12/4)+(1) + 8 - 2 + 1.875
+	c. 3 + 1 + 8 - 2 + 1.875
+2. priority of + and - is same and executed from left to right
+	a. 4 + 8 - 2 + 1.875
+	b. 12 - 2 + 1.875
+	c. 10 + 1.875
+	d. 11.875
+3. answer is 11.875
+	
