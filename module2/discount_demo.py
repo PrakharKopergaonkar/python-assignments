@@ -1,4 +1,3 @@
-amount = 99
 quantity = int(input("enter quantity: "))
 discount=0
 if(quantity>=100):
