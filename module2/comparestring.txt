@@ -1,0 +1,4 @@
+answer : 
+1. output1:'z is not less than a'
+2. output2: Boston
+	    New York
