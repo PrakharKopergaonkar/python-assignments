@@ -1,13 +1,13 @@
 #left arrow star pattern
 k = 5
-    for i in range(0,9):
-            if(i<5):
-                print("*"*(5-i),end='')
-            if(i==5):
-                print("*"*2,end='')
-            if(i>5):
-                print("*"*(abs(5-i)+2), end='')
-            print("",end='\n')
+for i in range(0,9):
+        if(i<5):
+            print("*"*(5-i),end='')
+        if(i==5):
+            print("*"*2,end='')
+        if(i>5):
+            print("*"*(abs(5-i)+2), end='')
+        print("",end='\n')
 
 #plus pattern
 for i in range(0, 9):
