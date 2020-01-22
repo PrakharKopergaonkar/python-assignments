@@ -10,11 +10,11 @@ for i in range(1, 6):
 print("",end='\n')
 
 #plus pattern
-for i in range(0, 10):
-    for j in range(0,10):
-        if(j==5):
+for i in range(0, 9):
+    for j in range(0,9):
+        if(i==4):
             print("*",end='')
-        if(i==5):
+        elif(j==4):
             print("*",end='')
         else:
             print("",end=' ')
