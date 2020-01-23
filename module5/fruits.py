@@ -16,8 +16,8 @@ for itemvalues in fruits.keys():
                 if(nutritionvalues == "protein" and float(itemvalues1[fruitvalues][nutritionvalues])>maxproteinvalues):
                     maxproteinvalues = float(itemvalues1[fruitvalues][nutritionvalues])
                     maxproteinfruit = itemvalues
-                    if(item==True and float(itemvalues1[fruitvalues][nutritionvalues]) > maxproteinvalueinchina):
-                        maxproteinvalueinchina = float(itemvalues1[fruitvalues][nutritionvalues])
-                        maxproteinfruitinchina = itemvalues
-print("max protein fruit : {}".format(maxproteinfruit))
-print("max protein fruit in china : {}".format(maxproteinfruitinchina))
+                if(item==True and nutritionvalues == "protein" and float(itemvalues1[fruitvalues][nutritionvalues]) > maxproteinvalueinchina):
+                    maxproteinvalueinchina = float(itemvalues1[fruitvalues][nutritionvalues])
+                    maxproteinfruitinchina = itemvalues
+print("max protein fruit : {} with protein value : {}".format(maxproteinfruit, maxproteinvalues))
+print("max protein fruit in china : {} with protein value: {}".format(maxproteinfruitinchina, maxproteinvalueinchina))
