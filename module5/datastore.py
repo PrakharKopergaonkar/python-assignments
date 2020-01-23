@@ -44,4 +44,6 @@ while(True):
         datastore = add_departments(datastore)
     elif(choice==3):
         break
+     else:
+        print("invalid")
     print(datastore)
