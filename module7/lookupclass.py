@@ -6,6 +6,15 @@ class contactclass:
         self.email = email
         self.phone = phone
 
+    def get_name(self):
+        return self.name
+
+    def get_email(self):
+        return self.email
+
+    def get_phone(self):
+        return self.phone
+
     def set_name(self, x):
         self.name = x
 
@@ -43,10 +52,6 @@ class contactclass:
     def existingcontact(self, id):
         for i in self.dict.keys():
             if(i==id):
-                detail = list(self.dict[i].split(" "))
-                self.set_name(detail[0])
-                self.set_email(detail[1])
-                self.set_phone(detail[2])
                 change = input("enter all changes you want to make out of name, email and phone_no")
                 list1 = list(change.split(" "))
                 for i in list1:
@@ -59,8 +64,10 @@ class contactclass:
                     elif(i=='phone_no'):
                         phone_no = int(input("enter new phone_no: "))
                         self.set_phone(phone_no)
-                self.dict[id] = {self.name, self.mail, self.phone}
-        print("id does not exist")
+                    else:
+                        print("parameter doesn't exist")
+            else:
+                print("id does not exist")
 def main():
     dict = {}
     handle = open('lookupdetails.bat', 'rb+')
@@ -79,10 +86,7 @@ def main():
         elif(choice==3):
             id = int(input("enter id of existing contact:"))
             contactobject.existingcontact(id)
-            if(j!=NULL):
-                dict[id] = contactobject
-            else:
-                print("id doesnot exist")
+            dict[id] = contactobject
             pickle.dump(dict, handle)
             print(dict)
         elif(choice==4):
