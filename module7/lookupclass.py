@@ -1,10 +1,11 @@
 import pickle
 class contactclass:
-    def __init__(self, dict, name="", email="", phone=0):
+    def __init__(self, dict, name="", email="", phone=0, id=""):
         self.dict = dict
         self.name = name
         self.email = email
         self.phone = phone
+        self.id = id
 
     def get_name(self):
         return self.name
@@ -15,6 +16,9 @@ class contactclass:
     def get_phone(self):
         return self.phone
 
+    def get_id(self):
+        return id
+
     def set_name(self, x):
         self.name = x
 
@@ -24,8 +28,11 @@ class contactclass:
     def set_phone(self, x):
         self.phone = x
 
+    def set_id(self, id):
+        self.id = id
+
     def __str__(self):
-        return self.dict
+        return self.dict[self.get_id()]
 
     def newcontact(self, id):
         name = input("enter your name: ")
@@ -34,7 +41,8 @@ class contactclass:
         self.set_email(email)
         phone = input("enter your phone: ")
         self.set_phone(phone)
-        self.dict[id] = {self.name, self.email, self.phone}
+        self.set_id(id)
+        self.dict[self.id] = {self.name, self.email, self.phone}
 
     def lookupcontact(self, id):
         for i in self.dict.keys():
@@ -99,3 +107,7 @@ def main():
         else:
             print("invalid choice")
 main()
+
+
+
+
