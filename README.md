@@ -1,2 +1,2 @@
 # python-assignments
-python assignments of training
+<p> python assignments of training held at svvv, Indore</p>
